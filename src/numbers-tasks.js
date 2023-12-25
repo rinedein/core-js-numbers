@@ -637,8 +637,12 @@ function getSumOfNumbers(x1, x2, x3) {
  * -5, -6 => -5
  * 0, 5   => 5
  */
-function getMaxNumber(/* firstNumber, secondNumber */) {
-  throw new Error('Not implemented');
+function getMaxNumber(firstNumber, secondNumber) {
+  if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
+    return NaN;
+  }
+
+  return Math.max(firstNumber, secondNumber);
 }
 
 /**
