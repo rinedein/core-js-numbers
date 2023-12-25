@@ -410,8 +410,10 @@ function toExponential(number, fractionDigits) {
  * 12345, 2    => '12345.00'
  * 12.345, 1   => '12.3'
  */
-function toFixed(/* number, fractionDigits */) {
-  throw new Error('Not implemented');
+function toFixed(number, fractionDigits) {
+  const roundedNumber = Number(number.toFixed(fractionDigits));
+  const formattedNumber = roundedNumber.toFixed(fractionDigits);
+  return formattedNumber;
 }
 
 /**
