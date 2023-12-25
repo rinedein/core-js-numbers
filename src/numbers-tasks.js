@@ -428,8 +428,9 @@ function toFixed(number, fractionDigits) {
  * 12345, 7    => '12345.00'
  * 12.345, 4   => '12.35'
  */
-function toPrecision(/* number, precision */) {
-  throw new Error('Not implemented');
+function toPrecision(number, precision) {
+  const roundedNumber = parseFloat(number.toPrecision(precision));
+  return roundedNumber.toString();
 }
 
 /**
