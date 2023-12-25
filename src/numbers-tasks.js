@@ -564,8 +564,13 @@ function roundToSmallestInteger(number) {
  * 5.1  => 6
  * -5.9 => -5
  */
-function roundToLargestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToLargestInteger(number) {
+  if (Number.isNaN(number)) {
+    return 'Invalid input. Please provide a valid number.';
+  }
+
+  const roundedNumber = Math.ceil(number);
+  return roundedNumber;
 }
 
 /**
