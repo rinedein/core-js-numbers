@@ -545,8 +545,13 @@ function isSafeInteger(number) {
  * 5.9  => 5
  * -5.1 => -6
  */
-function roundToSmallestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToSmallestInteger(number) {
+  if (Number.isNaN(number)) {
+    return 'Input is not a number';
+  }
+
+  const roundedNumber = Math.floor(number);
+  return roundedNumber;
 }
 
 /**
