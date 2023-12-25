@@ -601,18 +601,15 @@ function getHypotenuse(/* a, b */) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  let absoluteValue;
+  const absoluteValue = number >= 0 ? number : -number;
   let count = 0;
-  if (number >= 0) {
-    absoluteValue = number;
-  } else {
-    absoluteValue = -number;
-  }
+
   for (let i = 0; i <= absoluteValue; i += 1) {
     if (i % 2 !== 0) {
       count += 1;
     }
   }
+
   return count;
 }
 
