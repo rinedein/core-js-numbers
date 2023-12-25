@@ -144,8 +144,10 @@ function getLastDigit(value) {
  *     '37'     => 37
  * '-525.5'     => -525.5
  */
-function parseNumberFromString(/* value */) {
-  throw new Error('Not implemented');
+function parseNumberFromString(value) {
+  if (typeof value !== 'string') return NaN;
+  if (/^[-+]?\d*\.?\d+$/.test(value)) return parseFloat(value);
+  return NaN;
 }
 
 /**
