@@ -672,8 +672,12 @@ function getRandomInteger(min, max) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(sideA, sideB) {
+  if (Number.isNaN(sideA) || Number.isNaN(sideB)) {
+    return NaN;
+  }
+
+  return Math.hypot(sideA, sideB);
 }
 
 /**
