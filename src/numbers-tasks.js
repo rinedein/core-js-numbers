@@ -19,29 +19,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  if (typeof width !== 'number' || typeof height !== 'number') {
-    throw new Error('Both width and height must be numbers');
-  }
-
-  if (width <= 0 || height <= 0) {
-    throw new Error('Width and height must be positive numbers');
-  }
-
-  const area = width * height;
-  return area;
-}
-
-try {
-  const area1 = getRectangleArea(5, 10);
-  console.log(area1);
-
-  const area2 = getRectangleArea(5, 5);
-  console.log(area2);
-
-  const invalidArea = getRectangleArea('invalid', 5);
-  console.log(invalidArea);
-} catch (error) {
-  console.error(error.message);
+  return width * height;
 }
 
 /**
@@ -90,8 +68,10 @@ function getAverage(value1, value2) {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getDistanceBetweenPoints(x1, y1, x2, y2) {
+  const deltaX = x2 - x1;
+  const deltaY = y2 - y1;
+  return Math.sqrt(deltaX ** 2 + deltaY ** 2);
 }
 
 /**
